@@ -58,12 +58,13 @@ cd [NOME-DA-PASTA]
 # 3. [Comando para instalar dependências, ex: npm install]
 
 # 4. [Comando para rodar o projeto, ex: python main.py]
-
+```
+-----------------------------------------------------------------------------------------
 # Guia Prático de Next.js
 
 Este guia reúne os principais conceitos, comandos e boas práticas do Next.js, servindo como referência rápida tanto para iniciantes quanto para desenvolvedores experientes.
 
-------------------------------------------------------------------------------------------------
+---
 
 ## O que é Next.js
 Next.js é um framework React que facilita a criação de aplicações web modernas, oferecendo renderização no servidor, rotas automáticas e otimizações de performance.
@@ -93,4 +94,48 @@ Divisão da interface em componentes reutilizáveis, facilitando manutenção e 
 
 ### Inicialização
 ```bash
-npx create-next-app@latest nome-do-projeto
+npx create-next-app@latest nome-do-projeto]
+```
+Cria um novo projeto Next.js com as configurações iniciais.
+
+## Comandos de Script
+* **npm run dev**: Inicia o servidor de desenvolvimento. O projeto roda, por padrão, em **http://localhost:3000**.
+* **npm run build**: Gera a versão otimizada do projeto para produção.
+* **npm run start**: Executa o projeto em modo de produção após o build.
+
+## Gerenciamento de Dependências
+* **npm install**: Instala todas as dependências do projeto.
+* **npm install nome-do-pacote**: Instala uma dependência específica.
+* **npm uninstall nome-do-pacote**: Remove uma dependência do projeto.
+
+## Estrutura Comum de Pastas
+* **app**: Contém a estrutura principal de rotas, layouts e páginas usando o App Router.
+* **pages**: Contém as rotas no modelo tradicional do Pages Router.
+* **components**: Armazena componentes reutilizáveis da aplicação.
+* **public**: Armazena arquivos estáticos como imagens e ícones.
+* **services**: Contém arquivos responsáveis por comunicação com APIs.
+* **hooks**: Armazena hooks personalizados.
+
+## Solução de Problemas e Manutenção
+
+### Limpeza de Cache
+Em alguns casos, erros podem ser resolvidos limpando o cache do Next.js.
+
+* **No Windows**: `rmdir /s /q .next`
+* **No macOS ou Linux**: `rm -rf .next`
+
+### Portas em Uso (Windows)
+Se a porta 3000 já estiver ocupada:
+
+1. **Identificar o processo**: `netstat -ano | findstr :3000`
+2. **Finalizar o processo (substituindo o PID)**: `taskkill /PID 1234 /F`
+
+## Fluxo Básico de Desenvolvimento
+1. `npm install`
+2. `npm run dev`
+
+## Boas Práticas
+* Manter componentes pequenos e reutilizáveis.
+* Utilizar nomes claros para arquivos e pastas.
+* Versionar o projeto com Git desde o início.
+* Separar lógica de negócio da interface.

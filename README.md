@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MEU PROJETO NEXT
 
-## Getting Started
+> Projeto de uma LP em Next.js para estudo.
 
-First, run the development server:
+---
 
+## 📌 Sobre o Projeto
+Esse projeto foi criado para um estudo de como utilizar o Next.js em um projeto real, com a finalidade de acrescentar em um portifólio.
+
+* **Objetivo:** Criar uma LP com o Next.js
+* **Status:** Em desenvolvimento
+
+## 🛠️ Tecnologias e Ferramentas
+* **Linguagem Principal:** TypeScript
+* **Frameworks/Bibliotecas:** Next.js e Tailwind CSS
+* **Outras Ferramentas:** VS Code
+---
+
+## 📖 Guia de Git (Referência Rápida)
+
+Este repositório também serve como material de estudo para os comandos fundamentais do Git.
+
+### 🏗️ Conceitos Básicos
+* **Commit:** "Fotografia" do código em um momento específico.
+* **Branch:** Ramificação para desenvolver funções sem afetar o código principal.
+* **Staging Area:** Área de preparação antes do commit (`git add`).
+* **Repositório Remoto:** Versão do código hospedada online (GitHub).
+
+### 🚀 Comandos Principais
+| Ação | Comando |
+| :--- | :--- |
+| **Inicializar/Clonar** | `git init` ou `git clone <url>` |
+| **Ver Status** | `git status` |
+| **Histórico** | `git log --oneline` |
+| **Preparar Arquivos** | `git add .` |
+| **Salvar Alterações** | `git commit -m "mensagem"` |
+| **Sincronizar** | `git pull` (receber) / `git push` (enviar) |
+| **Branches** | `git checkout -b <nome>` (criar) / `git merge <nome>` (unir) |
+
+### 🛠️ Desfazer Alterações
+* `git restore <arquivo>`: Desfaz alterações não salvas.
+* `git reset --soft HEAD~1`: Volta um commit, mantém o código.
+* `git reset --hard HEAD~1`: **Cuidado!** Apaga o último commit e as alterações.
+
+### 🔄 Fluxo de Trabalho Recomendado
+1. `git pull` ➡️ 2. *Alterações no código* ➡️ 3. `git add .` ➡️ 4. `git commit` ➡️ 5. `git push`
+
+---
+
+## ⚙️ Como Executar o Projeto
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 1. Clone o repositório
+git clone [URL-DO-REPOSITORIO]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 2. Entre na pasta
+cd [NOME-DA-PASTA]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 3. [Comando para instalar dependências, ex: npm install]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 4. [Comando para rodar o projeto, ex: python main.py]
 
-## Learn More
+# Guia Prático de Next.js
 
-To learn more about Next.js, take a look at the following resources:
+Este guia reúne os principais conceitos, comandos e boas práticas do Next.js, servindo como referência rápida tanto para iniciantes quanto para desenvolvedores experientes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+------------------------------------------------------------------------------------------------
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## O que é Next.js
+Next.js é um framework React que facilita a criação de aplicações web modernas, oferecendo renderização no servidor, rotas automáticas e otimizações de performance.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Principais Conceitos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Renderização
+Next.js permite diferentes formas de renderização, como:
+* **Server Side Rendering (SSR)**
+* **Static Site Generation (SSG)**
+* **Client Side Rendering (CSR)**
+
+### App Router
+Estrutura moderna baseada na pasta `app`, que organiza páginas, layouts e rotas de forma mais clara.
+
+### Pages Router
+Estrutura tradicional baseada na pasta `pages`, onde cada arquivo representa uma rota.
+
+### Componentização
+Divisão da interface em componentes reutilizáveis, facilitando manutenção e escalabilidade.
+
+---
+
+## Criação e Execução de Projetos
+
+### Inicialização
+```bash
+npx create-next-app@latest nome-do-projeto
